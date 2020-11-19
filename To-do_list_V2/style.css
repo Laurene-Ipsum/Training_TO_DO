@@ -1,0 +1,279 @@
+* {
+  margin: 0em;
+  padding: 0em;
+  box-sizing: border-box;
+}
+/* ------------Les Backgrounds –––––––––––– */
+html {
+  background: url(./img/bg-hearthstone1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* ------------Body Flex ––––––––––––*/
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* ---------La boite hearthstone et son contenu ––––––– */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(./img/boite-hearthstone-sans-t.png);
+  background-attachment: local;
+  background-position: center center;
+  background-size: cover;
+  background-position-y: 50px;
+  min-width: 100%;
+  min-height: 1200px;
+}
+/* ------------Input Ajouter un TODO –––––––––––– */
+/* ------Tout––– */
+.input-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+/* ------L'espace blanc––– */
+.input-div .input {
+  height: 45px;
+  background-color: white;
+  font-size: 1.15em;
+  width: 270px;
+  margin: 0.35em;
+  border-radius: 5px;
+}
+
+/* ------Button Ajouter ! style ! hearthstone––– */
+.addButton {
+  cursor: pointer;
+  width: 130px;
+  padding: 0 2px;
+  border-right: none;
+  border-left: none;
+  box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 5px;
+  /* veux tu changer le border bleu */
+  outline: none;
+}
+/* ------Texte Button 1er plan ajouter hearthstone style––– */
+.hs-text {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+  padding: 9px 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 0 0 4px #000, 0 0 8px #000;
+  font-size: 20px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+.hs-border {
+  display: table;
+  padding: 3px;
+  border-radius: 2px;
+  height: 35px;
+  min-height: 35px;
+  width: 100%;
+  /* Font style */
+  text-transform: uppercase;
+  font-family: "Fondamento", cursive;
+  font-weight: normal;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 1px 1px #000;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-align: center;
+}
+/* ------Button Ajouter ! COULEUR ! hearthstone––– */
+.hs-text.gold {
+  background: radial-gradient(circle, #edca37 25%, #a77d33 75%, #5f3f1d);
+}
+.hs-border.gold {
+  background-color: #a77d33;
+  box-shadow: 0px 2px 6px 0px #362c26;
+  background: linear-gradient(
+    to bottom,
+    #d8be52,
+    #d5b631 5%,
+    #5f3f1d 59%,
+    #362c26
+  );
+}
+.hs-border:hover .hs-text.gold {
+  background: radial-gradient(circle, #fed83b 22%, #dba23e 83%, #9d6224);
+}
+/*---------------Liste des TODO avec Scroll-------------------*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  /*  MODIFIER  */
+  overflow: auto;
+  width: 420px;
+  height: 400px;
+}
+/* ------------Input bar –––––––––––– */
+.item {
+  border-bottom: 2px solid rgba(61, 31, 24, 0.3);
+  margin-bottom: 1.5rem;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+/* ---------------Input en création ––––––---––––––*/
+.item_input {
+  background: rgb(147, 104, 56);
+  background: linear-gradient(
+    338deg,
+    rgba(147, 104, 56, 0) 0%,
+    rgba(149, 105, 57, 0) 94%
+  );
+  outline: none;
+  border: none;
+  color: #fff;
+  width: 270px;
+  vertical-align: middle;
+  padding: 0.6rem 0.5rem 0.6rem 0rem;
+  text-transform: uppercase;
+  /* J ai supprimer le display qui etait ignorer */
+  font-weight: 400;
+  font-family: "Fondamento", cursive;
+  text-shadow: 0 0 4px #000, 0 0 8px #000;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+/*--------------EDIT et REMOVE---------------------------*/
+.editButton {
+  background: none;
+  outline: none;
+  border: none;
+  color: rgb(255, 251, 0);
+  /* font-family: "Hind", sans-serif;*/
+  margin: 0 0.5rem;
+  cursor: pointer;
+  font-family: "Fondamento", cursive;
+
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+.removeButton {
+  background: none;
+  outline: none;
+  border: none;
+  color: rgb(189, 0, 0);
+  cursor: pointer;
+  font-family: "Fondamento", cursive;
+
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin: 0 0.5rem;
+}
+.barrerButton {
+  background: none;
+  outline: none;
+  border: none;
+  color: rgb(45, 175, 67);
+  cursor: pointer;
+  font-family: "Fondamento", cursive;
+
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin: 0 0.5rem;
+}
+.refresh {
+  background: none;
+  outline: none;
+  border: none;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+
+  font-size: 1.2rem;
+
+  margin: 0 0.5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background-color: rgb(94, 68, 30);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Fondamento", cursive;
+  text-shadow: 0 0 4px #000, 0 0 8px #000;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+.img-footer {
+  width: 50%;
+}
+.footer2 {
+  line-height: 0.1px;
+  align-content: center;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  background: rgb(131, 70, 32);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 70, 32, 0.9487460623714243) 0%,
+    rgba(145, 70, 32, 1) 48%,
+    rgba(131, 70, 32, 0.9612852473244025) 100%
+  );
+  width: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(31, 21, 13);
+  background: linear-gradient(
+    90deg,
+    rgba(31, 21, 13, 0.95) 0%,
+    rgba(31, 21, 13, 0.8202194166033993) 48%,
+    rgba(31, 21, 13, 0.8139498241269103) 100%
+  );
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(131, 70, 32);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 70, 32, 0.9487460623714243) 0%,
+    rgba(145, 70, 32, 1) 48%,
+    rgba(131, 70, 32, 0.9612852473244025) 100%
+  );
+  border-radius: 5px;
+}
+
+/* 
+#color1 {
+  background-color: #93410dff;
+}
+#color2 {
+  background-color: #eab661ff;
+}
+#color3 {
+  background-color: #d75d5cff;
+}
+#color4 {
+  background-color: #b7bfa2ff;
+}
+#color5 {
+  background-color: #aa92d8ff;
+} */

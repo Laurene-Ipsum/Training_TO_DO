@@ -1,0 +1,198 @@
+* {
+  margin: 0em;
+  padding: 0em;
+  box-sizing: border-box;
+}
+/* ------------Les Backgrounds –––––––––––– */
+html {
+  background: url(./img/bg-hearthstone1.png);
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* ------------Body Flex ––––––––––––*/
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* ---------La boite hearthstone et son contenu ––––––– */
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(./img/boite-hearthstone-sans-t.png);
+  background-attachment: local;
+  background-position: center center;
+  background-size: cover;
+  background-position-y: 50px;
+  min-width: 100%;
+  min-height: 1200px;
+}
+/* ------------Input Ajouter un TODO –––––––––––– */
+/* ------Tout––– */
+.input-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+/* ------L'espace blanc––– */
+.input-div .input {
+  height: 45px;
+  background-color: white;
+  font-size: 1.15em;
+  width: 230px;
+  margin: 0.35em;
+  border-radius: 5px;
+}
+/* ------Button Ajouter ! style ! hearthstone––– */
+.addButton {
+  cursor: pointer;
+  width: 130px;
+  padding: 0 2px;
+  border-right: none;
+  border-left: none;
+  box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 5px;
+}
+/* ------Texte Button 1er plan ajouter hearthstone style––– */
+.hs-text {
+  display: table-cell; 
+  width: 100%;
+  vertical-align: middle;
+  padding: 9px 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 0 0 4px #000, 0 0 8px #000;
+  font-size: 20px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+.hs-border{
+  display: table;
+  padding: 3px;
+  border-radius: 2px;
+  height: 35px;
+  min-height: 35px;
+  width: 100%;
+  /* Font style */
+  text-transform: uppercase;
+  font-family: 'Fondamento', cursive;
+  font-weight: normal;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 1px 1px #000;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-align: center;
+}
+/* ------Button Ajouter ! COULEUR ! hearthstone––– */
+.hs-text.gold {
+  background: radial-gradient(circle,
+      #edca37 25%,
+      #a77d33 75%,
+      #5f3f1d);
+}
+.hs-border.gold {
+  background-color: #a77d33;
+  box-shadow: 0px 2px 6px 0px #362c26;
+  background: linear-gradient(to bottom,
+      #d8be52,
+      #d5b631 5%,
+      #5f3f1d 59%,
+      #362c26);
+}
+.hs-border:hover .hs-text.gold{
+  background: radial-gradient(circle,
+      #fed83b 22%,
+      #dba23e 83%,
+      #9d6224);
+}
+/*---------------Liste des TODO avec Scroll-------------------*/
+.container { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 420px;
+  height: 400px; 
+}
+/* ------------Input bar –––––––––––– */
+.item {
+  border-bottom: 2px solid rgb(148, 110, 54);
+  margin-bottom: 1.5rem;
+}
+/* ---------------Input en création ––––––---––––––*/
+.item_input {
+  background: rgba(199, 167, 25, 0.541);
+  outline: none;
+  border: none;
+  color: #fff;
+  width: 285px;
+  vertical-align: middle;
+  padding: 0.6rem 0.5rem;
+  text-transform: uppercase;
+  display: inline;
+  font-weight: 400;
+  font-family: 'Fondamento', cursive;
+  text-shadow: 0 0 4px #000, 0 0 8px #000;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+/*--------------EDIT et REMOVE---------------------------*/
+.editButton {
+  background: none;
+  outline: none;
+  border: none;
+  color: rgb(255, 251, 0);
+ /* font-family: "Hind", sans-serif;*/
+  margin: 0 0.5rem;
+  cursor: pointer;
+  font-family: 'Fondamento', cursive;
+  text-shadow: 0 0 4px #000, 0 0 8px #000;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+}
+.removeButton {
+  background: none;
+  outline: none;
+  border: none;
+  color: rgb(189, 0, 0);
+  cursor: pointer;
+  font-family: 'Fondamento', cursive;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.603), 0 0 8px rgba(0, 0, 0, 0.582);
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+}
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background-color: rgb(94, 68, 30);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Fondamento', cursive;
+  text-shadow: 0 0 4px #000, 0 0 8px #000;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  
+}
+.img-footer {
+  width: 50%;
+}
+.footer2{
+  line-height: 0.1px;
+  align-content: center;
+  text-align: center;
+}
